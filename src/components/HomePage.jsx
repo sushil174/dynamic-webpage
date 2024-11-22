@@ -1,12 +1,7 @@
-import {Link} from 'react-router-dom'
+import {Link, useLoaderData} from 'react-router-dom'
 
 export default function HomePage() {
-    const pages = [
-        {
-            id : 1,
-            title : "testing...."
-        }
-    ]
+    const {pages} = useLoaderData()
     return (
         <div>
             <h1>My Pages</h1>
