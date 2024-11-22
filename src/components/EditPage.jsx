@@ -4,8 +4,9 @@ import { createPage, updatePage } from "../../api";
 
 export default function EditPage() {
     const {page} = useLoaderData();
+    console.log(page)
     const navigate = useNavigate();
-    cont [formData, setFormData] = useState(page || {title: '', content:'',image:'',imageTitle: '',published:false})
+    const [formData, setFormData] = useState(page || {title: '', content:'',image:'',imageTitle: '',published:false})
 
     const handleInputChange = (e) => {
         const {name, value} = e.target;

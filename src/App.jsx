@@ -10,8 +10,9 @@ const router = createBrowserRouter([
     element : <HomePage />,
     loader: async () => {
       const pages = await getPages();
-      return (pages)
-    }
+      return {pages}
+    },
+    // errorElement: <div>Oops! Something went wrong.</div>
   }, 
 
   {
