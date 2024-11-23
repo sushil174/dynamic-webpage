@@ -4,7 +4,7 @@ export default function RenderPage() {
     const {page} = useLoaderData();
     if(!page) return <p>Loading...</p>
     return (
-        <div>
+        <div className="render-container">
             <h1>{page.title}</h1>
             <p>{page.content}</p>
             <figure>

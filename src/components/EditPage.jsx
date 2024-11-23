@@ -54,9 +54,10 @@ export default function EditPage() {
     }
 
     return (
-        <div>
+        <div className="edit-container">
             <h1>{page ? 'Edit Page' : 'Create Page'}</h1>
             <input 
+                className="title"
                 type="text"
                 name="title"
                 value={formData.title}
@@ -64,28 +65,36 @@ export default function EditPage() {
                 placeholder="Title"
             />
             <textarea 
+                className="content"
                 name="content"
                 value={formData.content}
                 onChange={handleInputChange}
                 placeholder="Content"
             />
-
-            <input type="file" accept="image/*" onChange={hanfleFileChange}/>
-            <button type="button" onClick={uploadImage}>Upload Image</button>
-            {formData.image && (
+            
+            <div className="image-upload">
                 <div>
-                    <p>Uploaded Image:</p>
-                    <img src={formData.image} alt="image" style={{width : '200px'}}/>
+                    <input type="file" className="image" accept="image/*" onChange={hanfleFileChange}/>
+                    <button type="button" onClick={uploadImage}>Upload Image</button>
                 </div>
-            )}
-            <input
-                type="text"
-                name="imageTitle"
-                value={formData.imageTitle}
-                onChange={handleInputChange}
-                placeholder="Image Title"
-            />
-            <button onClick={handleSubmit}>Save</button>
+
+                {formData.image && (
+                    <div className="image-preview">
+                        <p>Uploaded Image:</p>
+                        <img src={formData.image} alt="image" style={{width : '200px'}}/>
+                    </div>
+                )}
+
+                <input
+                    type="text"
+                    className="image-title"
+                    name="imageTitle"
+                    value={formData.imageTitle}
+                    onChange={handleInputChange}
+                    placeholder="Image Title"
+                />
+            </div>
+            <button className="save" onClick={handleSubmit}>Save</button>
         </div>
     )
 }
