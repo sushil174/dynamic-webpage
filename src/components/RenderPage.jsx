@@ -8,7 +8,7 @@ export default function RenderPage() {
             <h1>{page.title}</h1>
             <p>{page.content}</p>
             <figure>
-                <img src={page.imageUrl} alt={page.title} />
+                <img src={page.image} alt={page.title} />
                 <figcaption>{page.imageTitle}</figcaption>
             </figure>
         </div>
