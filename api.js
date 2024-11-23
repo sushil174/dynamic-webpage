@@ -22,11 +22,13 @@ export const createPage = async (pageData) => {
 export const updatePage = async (id, pageData) => {
     const response = await fetch(`${API_URL}/${id}`, {
         method:'PUT',
-        headers: {'Content-Type':'application.json'},
+        headers: {'Content-Type':'application/json'},
         body:JSON.stringify(pageData)
     })
+    console.log("response", response)
     return response.json()
 }
+
 
 export const deletePage = async (id) => {
     await fetch(`${API_URL}/${id}`, {method:'DELETE'})

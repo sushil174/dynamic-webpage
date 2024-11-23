@@ -1,5 +1,4 @@
 import {Link, useLoaderData} from 'react-router-dom'
-
 export default function HomePage() {
     const {pages} = useLoaderData()
     console.log(pages)

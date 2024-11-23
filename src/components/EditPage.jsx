@@ -4,7 +4,6 @@ import { createPage, updatePage } from "../../api";
 
 export default function EditPage() {
     const {page} = useLoaderData();
-    console.log(page)
     const navigate = useNavigate();
     const [formData, setFormData] = useState(page || {title: '', content:'',image:'',imageTitle: '',published:false})
 
@@ -13,11 +12,13 @@ export default function EditPage() {
         setFormData({...formData, [name]:value})
     }
 
+
     const handleSubmit = async () => {
         if(!page) {
             await createPage(formData)
-        }else {
-            await updatePage(page.id, formData)
+        }
+        else{
+            await updatePage(page._id, formData)
         }
         navigate('/')
     }
@@ -52,7 +53,7 @@ export default function EditPage() {
                 onChange={handleInputChange}
                 placeholder="Image Title"
             />
-            <button onClick={handleSubmit}>Publish</button>
+            <button onClick={handleSubmit}>Save</button>
         </div>
     )
 }
