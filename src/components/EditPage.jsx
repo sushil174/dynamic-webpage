@@ -59,6 +59,7 @@ export default function EditPage() {
             <input 
                 className="title"
                 type="text"
+                id="title"
                 name="title"
                 value={formData.title}
                 onChange={handleInputChange}
@@ -67,6 +68,7 @@ export default function EditPage() {
             <textarea 
                 className="content"
                 name="content"
+                id="content"
                 value={formData.content}
                 onChange={handleInputChange}
                 placeholder="Content"

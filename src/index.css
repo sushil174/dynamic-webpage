@@ -10,11 +10,20 @@ body {
     padding: 0;
 }
 
+input,textarea {
+    font-family: 'Georgia', serif; 
+    line-height: 1.6; 
+    /* background-color: #f4f4f4;  */
+    color: #333; 
+}
+button, .image-upload .image {
+    font-family: 'Georgia', serif; 
+    line-height: 1.6; 
+}
 /* Home page css */
 
 .home-container {
     height: 100vh;
-    background-color: lightblue;
 }
 .home-heading {
     display: flex;
@@ -22,15 +31,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-inline: 2rem;
-    background-color: lightcoral;
+    border-bottom: 1px solid black;
+
 }
 
 .home-heading a {
     background-color: lightseagreen;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
     color: black;
-    border: 1px solid rgb(29, 134, 128);
 }
 .home-heading a:hover {
     background-color: rgb(31, 163, 157);
@@ -50,10 +59,11 @@ body {
 .card {
     max-height: 300px;
     color:black;
-    background-color: lightsalmon;
     position: relative;
     width: 100%;
     padding: 5px;
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .image {
@@ -79,10 +89,6 @@ body {
     margin: 0;
     padding: 0;
 }
-/* .card:hover .image img {
-    transform: scale(1.05);
-    
-} */
 
 .links {
     padding : 10px 10px 0 0;
@@ -106,12 +112,16 @@ body {
 
 .edit-container {
     max-width: 1200px;
-    margin: 0 auto; /* Center content */
+    margin: 0 auto;
     padding: 20px;
     line-height: 1.5;
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
     gap: 10px;
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .edit-container .title {
@@ -120,16 +130,12 @@ body {
     border: none;
 }
 
-.edit-container .title::before {
-    content: "Title";
-}
 .edit-container .content {
     font-size: 1.2rem;
     width: 100%;
-    height: 150px;
+    height: 500px;
     border: none;
 }
-
 
 .image-upload {
     display: flex;
